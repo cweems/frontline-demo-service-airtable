@@ -2,11 +2,14 @@
 
 This repository contains an example server-side web application that is required to use [Twilio Frontline](https://www.twilio.com/frontline).
 
+This fork of the Frontline quickstart uses an Airtable base as a simple CRM.
+
 ## Prerequisites
 - A Twilio Account. Don't have one? [Sign up](https://www.twilio.com/try-twilio) for free!
 - Follow the quickstart tutorial [here](https://www.twilio.com/docs/frontline/nodejs-demo-quickstart).
 - NodeJS (latest or LTS)
 - Yarn
+- [Airtable Account](https://airtable.com/)
 
 ## How to start development service
 
@@ -36,7 +39,26 @@ TWILIO_SSO_REALM_SID=JBXXX...
 TWILIO_SMS_NUMBER # Twilio number for incoming/outgoing SMS
 TWILIO_WHATSAPP_NUMBER # Twilio number for incoming/outgoing Whatsapp
 
+# Airtable Configuration
+AIRTABLE_API_KEY=keyXXXXX
+AIRTABLE_BASE_ID=appXXXXX
+AIRTABLE_TABLE_NAME=(e.g. Customers)
+
 ```
+
+## Airtable Schema
+Create the following columns in your airtable base:
+
+* id (autonumber)
+* name (customer name)
+* sms (phone number)
+* whatsapp (whatsapp identifier)
+* linkedin (optional social media profile)
+* notes (any text you'd like)
+* owner (your Frontline user email)
+
+Example base:
+<img width="1218" alt="Screen Shot 2021-07-23 at 6 17 11 PM" src="https://user-images.githubusercontent.com/1418949/126853608-a42d4c84-56b4-4784-ba1c-e7b1b008f2e1.png">
 
 ## Setting up customers and mapping
 The customer data can be configured in ```src/routes/callbacks/crm.js```.
