@@ -41,7 +41,8 @@ const retrieveAirtableData = async () => {
                         { type: 'whatsapp', value: record.get('whatsapp') }
                     ],
                     links: [
-                        { type: 'LinkedIn', value: record.get('linkedin'), display_name: 'Social Media Profile' }
+                        { type: 'LinkedIn', value: record.get('linkedin'), display_name: 'Social Media Profile' },
+                        { type: 'Email', value: `mailto:${record.get('email')}`, display_name: 'Email Address' }
                     ],
                     details:{
                         title: "Information",
