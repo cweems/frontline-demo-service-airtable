@@ -5,7 +5,7 @@ const _ = (varName, defaults) => process.env[varName] || defaults || null;
 const port = _('PORT', 5000);
 
 module.exports = {
-    port: port,
+    port: process.env.PORT || port,
     twilio: {
         account_sid: _('TWILIO_ACCOUNT_SID'),
         auth_token: _('TWILIO_AUTH_TOKEN'),
