@@ -1,3 +1,6 @@
+# Deprecation Notice
+For a new version of this middleware service that can be deployed directly to Twilio Serverless, [see this repository.](https://github.com/cweems/frontline-quick-deploy)
+
 # Frontline Integration Service Example
 
 This repository contains an example server-side web application that is required to use [Twilio Frontline](https://www.twilio.com/frontline).
